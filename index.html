@@ -3,14 +3,58 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Rock Paper Scissors!</title>
+    <title>Train Flipboard</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css" />
+    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 </head>
 <body>
-    
-
-    <!-- INSERT JQUERY -->
+    <div class="container">
+        <div class="jumbotron">
+            <h1>Train Time Flipboard</h1>
+        </div>
+        <div class="card">
+            <div class = "card-header">
+                <h6>Trains Scheduled</h6>
+            </div>
+            <div id="smol">
+            <table class="table table-striped">
+                <thead>
+                  <tr>
+                    <th>Train Name</th>
+                    <th>Destination</th>
+                    <th>Next Arrival</th>
+                    <th>Frequency (min)</th>
+                    <th>Minutes Away</th>
+                  </tr>
+                </thead>
+                <tbody></tbody>
+              </table>
+            </div>
+        </div>
+        <div class="card">
+            <div class = "card-header">
+                <h6>Add Train</h6>
+                <div class="panel-body"></div>
+            </div>
+            <div class="card-body">
+                <form>
+                    <p>Train Name</p>
+                    <input type="text" class="form-control" id = "name">
+                    <p>Destination</p>
+                    <input type="text" class="form-control" id = "des">
+                    <p>First Arrival (military time no : necessary)</p>
+                    <input type="text" class="form-control" id = "time">
+                    <p>Frequency</p>
+                    <input type="number" class="form-control" id = "rate" >
+                    <br>
+                    <input type="submit" value="Submit" class="btn btn-default" id = "enter"> 
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="https://www.gstatic.com/firebasejs/5.7.1/firebase.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="assets/javascript/main.js"></script>
 </body>
 </html>
